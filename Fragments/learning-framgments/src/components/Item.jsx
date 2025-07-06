@@ -1,6 +1,6 @@
 import styles from "./Item.module.css";
 
-const Item = ({ foodItem, handleOnBuyEvent }) => {
+const Item = ({ foodItem, bought, handleOnBuyEvent }) => {
 
   // Handling event in same class
 
@@ -11,7 +11,7 @@ const Item = ({ foodItem, handleOnBuyEvent }) => {
   // }
 
 
-  return <li className="list-group-item">
+  return <li className={`list-group-item ${bought && 'active'}`}>
     <span className={`${styles["kg-span"]}`}>{foodItem}</span>
     <button className={`${styles.button} btn btn-info`}
       //Calling on Click function in same class.

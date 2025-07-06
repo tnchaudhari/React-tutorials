@@ -15,14 +15,15 @@ function App() {
   //Short code than above
   let [textShow, setTextState] = useState("Food name entered by User");
 
-  let [foodItems, setFoodItems] = useState([]);
+  let [foodItems, setFoodItems] = useState([]); // Here we have empty food items.
 
   const onKeyDown = (event) => {
     // event.target.value will give you the user entering value in text box and using setTextState we are setting the textshow value which was entered by user and then page refreshing.
     setTextState(event.target.value);
     if (event.key === 'Enter') {
       let newFoodItem = event.target.value;
-      let newItems = [...foodItems, newFoodItem];
+      event.target.value = '';
+      let newItems = [...foodItems, newFoodItem]; //Here we are fetching the foodItems and appending new entered value to it.
       setFoodItems(newItems);
     }
   }
