@@ -3,6 +3,7 @@ import "./App.css";
 import UseRefExample from './components/UseRefExample';
 import Profile from './components/Profile';
 import Footer from './components/Footer';
+import UseReducerExample from './components/UseReducerExample';
 
 function App() {
 
@@ -10,10 +11,13 @@ function App() {
     // <UseStateExample />
     // <UseRefExample />
 
-    <>
-      <Profile />
-      <Footer />
-    </>
+    //UseContextExample
+    // <>
+    //   <Profile />
+    //   <Footer />
+    // </>
+
+    <UseReducerExample />
   );
 }
 
